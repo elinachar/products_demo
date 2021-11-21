@@ -21,12 +21,13 @@ class Button extends React.Component {
     render() {
       return (
         <div>
-            <button onClick={this.handleClick} className="btn btn-info mb-3">
+            <button onClick={this.handleClick} className={`btn btn-info mb-3 ${this.state.clicked ? "disabled" : ""}`}>
                 Show Product Prices
             </button>
             {this.state.clicked ? <DisplayProductPrices /> : null}
         </div>
       );
+      
     }  
 }
 
